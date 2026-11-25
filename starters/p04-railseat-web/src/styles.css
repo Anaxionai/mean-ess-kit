@@ -1,0 +1,35 @@
+/* Plain, readable styles for every page. This course uses plain CSS, no CSS
+   framework. Add your own below; the seat grid goes in seat-map.css. */
+
+:root {
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: #1a1a1a;
+  background: #ffffff;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0 16px 32px;
+  max-width: 960px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+input,
+button {
+  font: inherit;
+  padding: 6px 10px;
+}
+
+:focus-visible {
+  outline: 3px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+/* TODO(task 7): style the header's links, and `.active` for the link of the
+   page you are on (routerLinkActive="active"). */

@@ -1,0 +1,54 @@
+// Types for Match Centre.
+//
+// The first four describe the replay server's JSON. They are empty in the
+// starter, because writing them from the real feed is task 10. Start the
+// replay server, then read `curl http://localhost:8765/live` and
+// `curl http://localhost:8765/meta` field by field before you write a type.
+// The feed sends the facts of each ball only: Match Centre works out every
+// total itself, in score.ts.
+
+/** One ball of the /live feed. */
+export interface Ball {
+  // TODO(task 10): one property per field of a ball, spelt as in the JSON.
+  //   A field that only some balls have is optional (?). A field that holds
+  //   an object gets an interface of its own. Never use `any`.
+}
+
+/** One innings of the /live feed, as the JSON groups it. */
+export interface Innings {
+  // TODO(task 10): one property per field of an innings, spelt as in the JSON.
+}
+
+/** The whole answer of GET /live. */
+export interface MatchState {
+  // TODO(task 10): one property per field of the /live answer. Then save a
+  //   real answer as src/app/live-sample.json and type it in src/app/sample.ts
+  //   (steps 5 and 6): `npx tsc -p tsconfig.app.json --noEmit` proves your
+  //   types match.
+}
+
+/** The answer of GET /meta: the teams, the venue and more. */
+export interface MatchMeta {
+  // TODO(task 10): the /meta fields you use, at least the teams and the venue,
+  //   spelt as in the JSON.
+}
+
+/** One batter's line in the batting table, made by battingCard (task 11). */
+export interface BattingRow {
+  name: string;
+  runs: number;
+  /** Balls faced. A wide is not a ball faced. */
+  balls: number;
+  fours: number;
+  sixes: number;
+}
+
+/** One bowler's line in the bowling table, made by bowlingCard (task 11). */
+export interface BowlingRow {
+  name: string;
+  /** Overs bowled as text, such as "3.2": 3 overs and 2 balls. */
+  overs: string;
+  /** Runs given away by the bowler. */
+  runs: number;
+  wickets: number;
+}

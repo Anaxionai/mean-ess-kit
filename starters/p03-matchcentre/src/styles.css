@@ -1,0 +1,11 @@
+/* The app's global stylesheet: every component uses these styles. */
+
+/* TODO(task 9): your phone-first layout, written for 360 pixels first.
+   - The header: a flexbox row that may wrap.
+   - main: a one-column grid.
+   - @media (min-width: 768px): two columns with grid-template-areas,
+     Scorecard on the left and Commentary on the right.
+   - .table-wrap: overflow-x: auto, so a wide table never scrolls the page.
+   - The score: font-variant-numeric: tabular-nums.
+   TODO(task 13): a visible focus ring on every button, and any contrast
+   fixes that Lighthouse asks for. */
